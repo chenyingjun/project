@@ -16,7 +16,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
  * @since 1.0
  * @version 2017年3月16日 chenyingjun
  */
-@Api(tags = "用户自定义聊天表情接口")
+@Api(description = "用户相关api")
+//@Api(tags = "用户自定义聊天表情接口")
 @Controller
 @RequestMapping(value = "/api/member")
 public class MemberController {
