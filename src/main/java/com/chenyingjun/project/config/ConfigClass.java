@@ -4,7 +4,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.ImportResource;
 
 /**
- * 
+ * 加载常用配置信息
  * 
  * @author chenyingjun
  * @since 1.0
