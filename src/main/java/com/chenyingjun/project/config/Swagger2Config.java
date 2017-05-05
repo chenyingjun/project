@@ -1,9 +1,3 @@
-/******************************************************************************
- * Copyright (C) 2016 ShenZhen ComTop Information Technology Co.,Ltd
- * All Rights Reserved.
- * 本软件为深圳康拓普开发研制。未经本公司正式书面同意，其他任何个人、团体不得使用、
- * 复制、修改或发布本软件.
- ******************************************************************************/
 package com.chenyingjun.project.config;
 
 import org.springframework.context.annotation.Bean;
@@ -37,7 +31,10 @@ public class Swagger2Config {
                 .paths(PathSelectors.any())
                 .build();
     }
-    //构建 api文档的详细信息函数
+
+    /**
+     * 构建 api文档的详细信息函数
+     */
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
                 //页面标题
