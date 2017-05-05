@@ -5,6 +5,8 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.*;
 import springfox.documentation.annotations.ApiIgnore;
 
@@ -22,6 +24,9 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/user")
 public class UserController {
+
+    private static final Logger logger = LoggerFactory.getLogger(UserController.class);
+
     @ApiOperation(value="创建用户", notes="根据User对象创建用户")
     @ApiImplicitParams({
             @ApiImplicitParam(dataType = "java.lang.Long", name = "id", value = "id", required = true, paramType = "path"),
@@ -40,11 +45,12 @@ public class UserController {
     @ApiImplicitParam(name = "id",value = "用户id", dataType = "String", paramType = "path")
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
     public User getUser(@PathVariable Long id){
-
+        logger.info("--------------------------getUser");
         User user = new User();
         user.setId(id);
         user.setPassword("abc");
         user.setUsername("12345");
+        logger.error("--------------------------getUser");
         return user;
     }
 
