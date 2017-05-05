@@ -24,7 +24,7 @@ import java.util.List;
  * @since 1.0
  */
 @RestController
-@RequestMapping("/demo")
+@RequestMapping("/user")
 public class UserController {
     @ApiOperation(value="创建用户", notes="根据User对象创建用户")
     @ApiImplicitParams({
